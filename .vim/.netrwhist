@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/roberth/cs/cs142/website/app'
+let g:netrw_dirhist_2='/Applications/XAMPP/xamppfiles/htdocs/xampp'
+let g:netrw_dirhist_3='/Users/roberth/cs/hello.dSYM'
+let g:netrw_dirhist_4='/Users/roberth/SCPD_VID_SCRAPER'
+let g:netrw_dirhist_5='/Users/roberth/cs/rstack/cookbooks/mysql/recipes'
+let g:netrw_dirhist_6='/Users/roberth/cs/rstack/cookbooks/build-essential/recipes'
+let g:netrw_dirhist_7='/Users/roberth/cs/rstack/cookbooks/vim/attributes'
+let g:netrw_dirhist_8='/Users/roberth/cs/dotfiles/.git'
