@@ -14,14 +14,14 @@ fi
 
 ln -s $(pwd)/.bashrc ~/.bashrc
 
-if [ -L ~/.vimrc ]
+if [[ -L ~/.vimrc || -a ~/.vimrc ]]
   then
     rm ~/.vimrc
 fi
 
 ln -s $(pwd)/.vimrc ~/.vimrc
 
-if [ -L ~/.vim ]
+if [[ -L ~/.vim || -a ~/.vim || -d ~/.vim ]]
   then
     rm -rf ~/.vim
 fi
