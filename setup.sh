@@ -1,27 +1,27 @@
 #!/bin/bash
 
-if [ -h ~/.bash_login ]
+if [[ -L ~/.bash_login || -a ~/.bash_login ]]
   then
     rm ~/.bash_login;
 fi
 
-ln -df .bash_login ~/.bash_login
+ln -s $(pwd)/.bash_login ~/.bash_login
 
-if [ -h ~/.bashrc ]
+if [[ -L ~/.bashrc || -a ~/.bashrc ]]
   then
     rm ~/.bashrc
 fi
 
-ln -df .bashrc ~/.bashrc
+ln -s $(pwd)/.bashrc ~/.bashrc
 
-if [ -h ~/.vimrc ]
+if [ -L ~/.vimrc ]
   then
     rm ~/.vimrc
 fi
 
-ln -df .vimrc ~/.vimrc
+ln -s $(pwd)/.vimrc ~/.vimrc
 
-if [ -d ~/.vim ]
+if [ -L ~/.vim ]
   then
     rm -rf ~/.vim
 fi
@@ -29,9 +29,12 @@ fi
 
 ln -s $(pwd)/.vim ~/.vim
 
-if [ -d ~/.vim/bundle/nerdtree ]
+if [[ -a ~/.vim/bundle/nerdtree || -d ~/.vim/bundle/nerdtree ]]
   then
-    rm ~/.vim/bundle/nerdtree
+    rm -rf ~/.vim/bundle/nerdtree
 fi
 
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+
+git config --global user.name "Robert Hintz"
+git config --global user.email roberthintz@gmail.com
