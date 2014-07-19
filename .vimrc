@@ -14,9 +14,9 @@ set encoding=utf-8
 
 " Whitespace stuff
 set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 " This option is for if you want to show something on trailing whitespace
 "set list listchars=tab:\ \ ,trail:.
@@ -31,7 +31,7 @@ set incsearch
 set hlsearch
 
 "Status bar
-let laststatus=2
+let laststatus=4
 
 "History stuff
 set history=300           " keep 50 lines of command line history
@@ -55,7 +55,7 @@ map <Leader>z :set hls!<CR>
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python set tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+au FileType python set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -68,3 +68,13 @@ map <C-J> <C-W>j<C-W>
 map <C-K> <C-W>k<C-W>
 map <C-H> <C-W>h<C-W>
 map <C-L> <C-W>l<C-W>
+
+map <c-a> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-a> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-a> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-a> :call CSSBeautify()<cr>
+
+autocmd VimEnter * NERDTree
