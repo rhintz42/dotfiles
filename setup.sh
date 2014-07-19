@@ -28,5 +28,12 @@ fi
 
 ln -s $(pwd)/.vim ~/.vim
 
+if [[ -L ~/.Xmodmap || -a ~/.Xmodmap ]]
+  then
+    rm -rf ~/.Xmodmap
+fi
+
+ln -s $(pwd)/.Xmodmap ~/.Xmodmap
+
 git config --global user.name "Robert Hintz"
 git config --global user.email roberthintz@gmail.com
