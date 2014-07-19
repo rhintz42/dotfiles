@@ -37,3 +37,4 @@ ln -s $(pwd)/.Xmodmap ~/.Xmodmap
 
 git config --global user.name "Robert Hintz"
 git config --global user.email roberthintz@gmail.com
+git config --global color.ui true
