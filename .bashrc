@@ -106,7 +106,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-source /home/surveymonkey/.rvm/scripts/rvm
+#source /home/surveymonkey/.rvm/scripts/rvm
 #PROMPT_COMMAND="ls;$PROMPT_COMMAND"
+
+alias tmux='tmux -2'
