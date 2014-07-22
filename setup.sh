@@ -40,4 +40,4 @@ git config --global user.email roberthintz@gmail.com
 git config --global color.ui true
 git config --global push.default simple
 
-sudo apt-get install tmux
+sudo apt-get install tmux mercurial
