@@ -113,6 +113,7 @@ fi
 
 alias tmux='tmux -2'
 
+# Advice received from: http://askubuntu.com/questions/211851/how-to-set-keyboard-shortcuts-from-a-script
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Primary><Alt>k']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control><Primary><Alt>j']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Primary><Alt>h']"
