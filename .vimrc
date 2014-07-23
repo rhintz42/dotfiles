@@ -77,4 +77,7 @@ autocmd FileType html noremap <buffer> <c-a> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-a> :call CSSBeautify()<cr>
 
+" Creates NERDTree when vim starts
 autocmd VimEnter * NERDTree
+" Goes to the screen on the right
+autocmd VimEnter * wincmd l
