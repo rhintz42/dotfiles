@@ -124,4 +124,11 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Contro
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Control><Shift><Primary><Alt>h']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Control><Shift><Primary><Alt>l']"
 
+let LOCK_LINE=`xmodmap | grep lock | wc -w`
+NUM_WORDS="1"
 
+if [ "$LOCK_LINE" != "$NUM_WORDS" ]
+    then
+        echo "Doing xmodmap"
+        xmodmap .Xmodmap
+fi
