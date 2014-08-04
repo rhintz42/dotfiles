@@ -35,6 +35,13 @@ fi
 
 ln -s $(pwd)/.Xmodmap ~/.Xmodmap
 
+if [[ -L ~/.tmux.conf || -a ~/.tmux.conf ]]
+  then
+    rm -rf ~/.tmux.conf
+fi
+
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+
 git config --global user.name "Robert Hintz"
 git config --global user.email roberthintz@gmail.com
 git config --global color.ui true
