@@ -48,3 +48,4 @@ git config --global color.ui true
 # git config --global push.default simple
 
 sudo apt-get -y install tmux mercurial
+sudo pip install virtualenvwrapper

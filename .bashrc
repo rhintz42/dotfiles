@@ -108,6 +108,8 @@ fi
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+# Load virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 #source /home/surveymonkey/.rvm/scripts/rvm
 #PROMPT_COMMAND="ls;$PROMPT_COMMAND"
 
