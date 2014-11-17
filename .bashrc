@@ -114,6 +114,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 #PROMPT_COMMAND="ls;$PROMPT_COMMAND"
 
 alias tmux='tmux -2'
+alias tmuxinator='mux -2'
+alias mux='mux -2'
 
 # Advice received from: http://askubuntu.com/questions/211851/how-to-set-keyboard-shortcuts-from-a-script
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Primary><Alt>k']"
@@ -134,3 +136,6 @@ if [ "$LOCK_LINE" != "$NUM_WORDS" ]
         echo "Doing xmodmap"
         xmodmap .Xmodmap
 fi
+
+export EDITOR='vim'
+source ~/.bin/tmuxinator.bash

@@ -1,0 +1,15 @@
+tmux has-session -t startup
+if [ $? != 0 ]
+then
+  tmux new-session -s startup -n SupervisorCTL -d
+  tmux new-window -n:VPN -t startup
+
+  tmux send-keys -t startup:0 'sudo supervisorctl restart all' C-m
+  tmux send-keys -t startup:0 'sudo supervisorctl' C-m
+
+  tmux send-keys -t startup:1 'cd /opt/webapp/startup' C-m
+  tmux send-keys -t startup:1 'sudo ./surveymonkey-vpn.sh' C-m
+
+  tmux select-window  -t anweb:1
+fi
+tmux attach -t startup

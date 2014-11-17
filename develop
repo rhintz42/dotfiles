@@ -1,0 +1,43 @@
+PROJECT_NAME=$1
+
+if [ $# -eq 0 ]
+then
+  echo "No arguments supplied"
+else
+  tmux has-session -t $PROJECT_NAME
+  if [ $? != 0 ]
+  then
+    tmux new-session -s $PROJECT_NAME -n Notes -d
+    tmux new-window -n:Editor -t $PROJECT_NAME
+    tmux new-window -n:Pserve -t $PROJECT_NAME
+    
+    tmux send-keys -t $PROJECT_NAME:0 'cd ~/Documents/notes' C-m
+    tmux send-keys -t $PROJECT_NAME:0 'clear' C-m
+    tmux send-keys -t $PROJECT_NAME:0 'vim' C-m
+    
+    tmux split-window -v -p 85 -t $PROJECT_NAME:1    # Split pane 1 horizontally by 25%
+    
+    tmux select-pane -t 1.0
+    
+    tmux send-keys -t $PROJECT_NAME:1 "cd /opt/src/$PROJECT_NAME/" C-m
+    tmux send-keys -t $PROJECT_NAME:1 "source /opt/webapp/$PROJECT_NAME/bin/activate" C-m
+    tmux send-keys -t $PROJECT_NAME:1 "clear" C-m
+    tmux send-keys -t $PROJECT_NAME:1 "py.test tests/ --run-slow --cov=$PROJECT_NAME --junitxml=junit.xml --cov-report=xml --cov-report=term-missing"
+    
+    tmux select-pane -t 1.1
+    
+    tmux send-keys -t $PROJECT_NAME:1 "cd /opt/src/$PROJECT_NAME/" C-m
+    tmux send-keys -t $PROJECT_NAME:1 "source /opt/webapp/$PROJECT_NAME/bin/activate" C-m
+    tmux send-keys -t $PROJECT_NAME:1 "clear" C-m
+    tmux send-keys -t $PROJECT_NAME:1 "vim" C-m
+    
+    tmux send-keys -t $PROJECT_NAME:2 "cd /opt/src/$PROJECT_NAME/" C-m
+    tmux send-keys -t $PROJECT_NAME:2 "source /opt/webapp/$PROJECT_NAME/bin/activate" C-m
+    tmux send-keys -t $PROJECT_NAME:2 "sudo supervisorctl stop $PROJECT_NAME" C-m
+    tmux send-keys -t $PROJECT_NAME:2 "clear" C-m
+    tmux send-keys -t $PROJECT_NAME:2 "pserve development.ini" C-m
+    
+    tmux select-window -t $PROJECT_NAME:1
+  fi
+  tmux attach -t $PROJECT_NAME
+fi
