@@ -41,6 +41,8 @@ if [[ -L ~/.tmux.conf || -a ~/.tmux.conf ]]
 fi
 
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+ln -s $(pwd)/develop /usr/bin/develop
+ln -s $(pwd)/startup /usr/bin/startup
 
 git config --global user.name "Robert Hintz"
 git config --global user.email roberthintz@gmail.com
