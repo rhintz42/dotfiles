@@ -116,15 +116,15 @@ source /usr/local/bin/virtualenvwrapper.sh
 alias tmux='tmux -2'
 
 # Advice received from: http://askubuntu.com/questions/211851/how-to-set-keyboard-shortcuts-from-a-script
-#gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Primary><Alt>k']"
-#gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control><Primary><Alt>j']"
-#gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Primary><Alt>h']"
-#gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Primary><Alt>l']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Control><Primary><Alt>k']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Control><Primary><Alt>j']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Control><Primary><Alt>h']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Control><Primary><Alt>l']"
 
-#gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Control><Shift><Primary><Alt>k']"
-#gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Control><Shift><Primary><Alt>j']"
-#gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Control><Shift><Primary><Alt>h']"
-#gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Control><Shift><Primary><Alt>l']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-up "['<Control><Shift><Primary><Alt>k']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Control><Shift><Primary><Alt>j']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Control><Shift><Primary><Alt>h']"
+gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Control><Shift><Primary><Alt>l']"
 
 let LOCK_LINE=`xmodmap | grep lock | wc -w`
 NUM_WORDS="1"
