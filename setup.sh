@@ -54,6 +54,8 @@ git config --global color.ui true
 sudo apt-get update
 sudo apt-get -y install tmux mercurial expect vim
 
+sudo apt-get -y install python-pip
+
 # Install VirtualBox
 curl -LO "http://download.virtualbox.org/virtualbox/4.3.22/virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb"
 sudo dpkg -i virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb
