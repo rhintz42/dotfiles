@@ -2,6 +2,9 @@
 
 # It is expected that git is already installed, since this is hosted on git
 
+# Do an update before installing everything
+sudo apt-get update
+
 if [[ -L ~/.bash_login || -a ~/.bash_login ]]
   then
     rm ~/.bash_login;
@@ -51,7 +54,6 @@ git config --global user.email roberthintz@gmail.com
 git config --global color.ui true
 # git config --global push.default simple
 
-sudo apt-get update
 sudo apt-get -y install tmux mercurial expect vim
 
 sudo apt-get -y install python-pip
