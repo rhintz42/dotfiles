@@ -57,6 +57,9 @@ git config --global color.ui true
 # Install standard things
 sudo apt-get -y install vim python-pip tmux mercurial expect
 
+# Install package to auto-copy file into copy command
+sudo apt-get -y install xclip
+
 # Install ftp mounting package
 sudo apt-get -y install curlftpfs
 
