@@ -55,7 +55,15 @@ git config --global color.ui true
 # git config --global push.default simple
 
 # Install standard things
-sudo apt-get -y install vim python-pip tmux mercurial expect
+sudo apt-get -y install vim python-pip tmux mercurial expect tree
+
+# Install ssh things
+sudo apt-get -y install openssh-client openssh-server
+
+sudo apt-get -y install software-properties-common
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get -y install ansible sshpass
 
 # Install package to auto-copy file into copy command
 sudo apt-get -y install xclip
