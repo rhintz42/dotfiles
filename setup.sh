@@ -52,7 +52,6 @@ ln -s $(pwd)/startup /usr/bin/startup
 git config --global user.name "Robert Hintz"
 git config --global user.email roberthintz@gmail.com
 git config --global color.ui true
-# git config --global push.default simple
 
 # Install standard things
 sudo apt-get -y install vim python-pip tmux mercurial expect tree
@@ -74,9 +73,21 @@ sudo apt-get -y install curlftpfs
 # Install VirtualBox
 curl -LO "http://download.virtualbox.org/virtualbox/4.3.22/virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb"
 sudo dpkg -i virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb
+rm virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb
 
 # Install Vagrant
 curl -LO 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb'
 sudo dpkg -i vagrant_1.7.2_x86_64.deb
+rm vagrant_1.7.2_x86_64.deb
+
+sudo apt-get -y install python-dev
+
+# Install vbguest plugin for vagrant
+vagrant plugin install vagrant-vbguest
 
 sudo pip install virtualenvwrapper
+
+dconf load /org/ < dconforg.dat
+
+# SurveyMonkey VPN
+sudo apt-get -y install vpnc network-manager-vpnc

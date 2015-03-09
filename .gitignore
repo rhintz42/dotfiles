@@ -1,3 +1,4 @@
 .vim/bundle/nerdtree/doc/tags
 *.netrwhist
 .vim/.netrwhist
+*.swp

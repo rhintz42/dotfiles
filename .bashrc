@@ -126,6 +126,10 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-down "['<Contro
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "['<Control><Shift><Primary><Alt>h']"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Control><Shift><Primary><Alt>l']"
 
+gsettings set org.gnome.desktop.wm.keybindings maximize "['<Control><Super>k']"
+gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Control><Super>j']"
+
+
 let LOCK_LINE=`xmodmap | grep lock | wc -w`
 NUM_WORDS="1"
 
