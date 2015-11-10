@@ -70,20 +70,24 @@ sudo apt-get -y install xclip
 # Install ftp mounting package
 sudo apt-get -y install curlftpfs
 
-# Install VirtualBox
-curl -LO "http://download.virtualbox.org/virtualbox/4.3.22/virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb"
-sudo dpkg -i virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb
-rm virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb
+if ! type vagrant > /dev/null; then
+    # Install VirtualBox
+    curl -LO "http://download.virtualbox.org/virtualbox/4.3.22/virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb"
+    sudo dpkg -i virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb
+    rm virtualbox-4.3_4.3.22-98236~Ubuntu~raring_amd64.deb
+fi
 
-# Install Vagrant
-curl -LO 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb'
-sudo dpkg -i vagrant_1.7.2_x86_64.deb
-rm vagrant_1.7.2_x86_64.deb
+if ! type vagrant > /dev/null; then
+    # Install Vagrant
+    curl -LO 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb'
+    sudo dpkg -i vagrant_1.7.2_x86_64.deb
+    rm vagrant_1.7.2_x86_64.deb
+fi
 
 sudo apt-get -y install python-dev
 
 # Install vbguest plugin for vagrant
-vagrant plugin install vagrant-vbguest
+# vagrant plugin install vagrant-vbguest
 
 sudo pip install virtualenvwrapper
 
