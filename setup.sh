@@ -104,4 +104,5 @@ sudo add-apt-repository ppa:kilian/f.lux
 sudo apt-get update
 sudo apt-get install fluxgui
 
+# Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
