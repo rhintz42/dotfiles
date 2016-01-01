@@ -98,3 +98,8 @@ sudo apt-get -y install vpnc network-manager-vpnc
 
 # Install speedtesting your internet connection
 sudo pip install speedtest-cli
+
+# Install f.lux: https://justgetflux.com/
+sudo add-apt-repository ppa:kilian/f.lux
+sudo apt-get update
+sudo apt-get install fluxgui

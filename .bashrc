@@ -140,3 +140,6 @@ if [ "$LOCK_LINE" != "$NUM_WORDS" ]
 fi
 
 export EDITOR='vim'
+
+export NVM_DIR="/home/surveymonkey/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
