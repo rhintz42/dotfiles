@@ -104,5 +104,11 @@ sudo add-apt-repository ppa:kilian/f.lux
 sudo apt-get update
 sudo apt-get install fluxgui
 
+# Install sshfs
+sudo apt-get -y install sshfs
+
+# Install vlc
+sudo apt-get -y install vlc
+
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
