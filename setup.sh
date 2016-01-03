@@ -110,5 +110,8 @@ sudo apt-get -y install sshfs
 # Install vlc
 sudo apt-get -y install vlc
 
+# Install vnstat to monitor how much data usage this computer uses
+sudo apt-get -y install vnstat
+
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
