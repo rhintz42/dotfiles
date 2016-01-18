@@ -49,6 +49,11 @@ colorscheme railscasts
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
+" Map NERDTree Toggling to Ctrl-N
+map <silent> <C-N> :NERDTreeToggle<CR>
+
+map <silent> <C-M> :set nonumber!<CR>
+
 " Toggle highlight search
 map <Leader>z :set hls!<CR>
 

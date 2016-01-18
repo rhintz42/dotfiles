@@ -95,3 +95,23 @@ dconf load /org/ < dconforg.dat
 
 # SurveyMonkey VPN
 sudo apt-get -y install vpnc network-manager-vpnc
+
+# Install speedtesting your internet connection
+sudo pip install speedtest-cli
+
+# Install f.lux: https://justgetflux.com/
+sudo add-apt-repository ppa:kilian/f.lux
+sudo apt-get update
+sudo apt-get install fluxgui
+
+# Install sshfs
+sudo apt-get -y install sshfs
+
+# Install vlc
+sudo apt-get -y install vlc
+
+# Install vnstat to monitor how much data usage this computer uses
+sudo apt-get -y install vnstat
+
+# Attempt to correct a system with broken dependencies in place
+sudo apt-get -yf install
