@@ -100,7 +100,7 @@ sudo apt-get -y install vpnc network-manager-vpnc
 sudo pip install speedtest-cli
 
 # Install f.lux: https://justgetflux.com/
-sudo add-apt-repository ppa:kilian/f.lux
+sudo add-apt-repository -y ppa:kilian/f.lux
 sudo apt-get update
 sudo apt-get install fluxgui
 
@@ -113,5 +113,10 @@ sudo apt-get -y install vlc
 # Install vnstat to monitor how much data usage this computer uses
 sudo apt-get -y install vnstat
 
+sudo add-apt-repository -y ppa:daniel.pavel/solaar
+sudo apt-get update && sudo apt-get -y install solaar
+sudo apt-get update && sudo apt-get -y install solaar-gnome3
+
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
+sudo apt-get -y autoremove
