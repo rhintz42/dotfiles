@@ -101,10 +101,26 @@ sudo apt-get -f install
 # Install speedtesting your internet connection
 sudo pip install speedtest-cli
 
-# install sshfs
-sudo apt-get install sshfs
-
 # install vlc
 sudo add-apt-repository ppa:mc3man/trusty-media
 sudo apt-get update
-sudo apt-get install vlc vlc-plugin-*
+sudo apt-get -y install vlc vlc-plugin-*
+
+# Install f.lux: https://justgetflux.com/
+sudo add-apt-repository -y ppa:kilian/f.lux
+sudo apt-get update
+sudo apt-get install fluxgui
+
+# Install sshfs
+sudo apt-get -y install sshfs
+
+# Install vnstat to monitor how much data usage this computer uses
+sudo apt-get -y install vnstat
+
+sudo add-apt-repository -y ppa:daniel.pavel/solaar
+sudo apt-get update && sudo apt-get -y install solaar
+sudo apt-get update && sudo apt-get -y install solaar-gnome3
+
+# Attempt to correct a system with broken dependencies in place
+sudo apt-get -yf install
+sudo apt-get -y autoremove

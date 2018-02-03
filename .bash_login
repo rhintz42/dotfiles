@@ -3,3 +3,5 @@
 #cd /opt/webapp
 
 source ~/.bashrc
+
+source ~/.profile

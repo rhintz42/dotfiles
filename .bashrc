@@ -106,11 +106,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source /home/surveymonkey/.rvm/scripts/rvm
 
 # Load virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
-#source /home/surveymonkey/.rvm/scripts/rvm
 #PROMPT_COMMAND="ls;$PROMPT_COMMAND"
 
 alias tmux='tmux -2'
@@ -133,10 +133,13 @@ gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Control><Super>j']
 let LOCK_LINE=`xmodmap | grep lock | wc -w`
 NUM_WORDS="1"
 
-if [ "$LOCK_LINE" != "$NUM_WORDS" ]
-    then
-        echo "Doing xmodmap"
-        xmodmap .Xmodmap
-fi
+# if [ "$LOCK_LINE" != "$NUM_WORDS" ]
+#     then
+#         echo "Doing xmodmap"
+#         xmodmap .Xmodmap
+# fi
 
 export EDITOR='vim'
+
+export NVM_DIR="/home/surveymonkey/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
