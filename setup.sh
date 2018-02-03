@@ -96,5 +96,15 @@ dconf load /org/ < dconforg.dat
 # SurveyMonkey VPN
 sudo apt-get -y install vpnc network-manager-vpnc
 
+sudo apt-get -f install
+
 # Install speedtesting your internet connection
 sudo pip install speedtest-cli
+
+# install sshfs
+sudo apt-get install sshfs
+
+# install vlc
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install vlc vlc-plugin-*
