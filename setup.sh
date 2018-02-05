@@ -89,7 +89,9 @@ sudo apt-get -y install python-dev
 # Install vbguest plugin for vagrant
 # vagrant plugin install vagrant-vbguest
 
-sudo pip install virtualenvwrapper
+# FiX XXX
+#   This should now use python3 instead of the default python, this might be fine, though
+# sudo pip install virtualenvwrapper
 
 dconf load /org/ < dconforg.dat
 
@@ -116,6 +118,8 @@ sudo apt-get -y install vnstat
 sudo add-apt-repository -y ppa:daniel.pavel/solaar
 sudo apt-get update && sudo apt-get -y install solaar
 sudo apt-get update && sudo apt-get -y install solaar-gnome3
+
+sudo apt install gnome-tweak-tool
 
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
