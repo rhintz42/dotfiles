@@ -119,12 +119,13 @@ sudo apt-get -y install sshfs
 # Install vnstat to monitor how much data usage this computer uses
 sudo apt-get -y install vnstat
 
-sudo add-apt-repository -y ppa:daniel.pavel/solaar
-sudo apt-get update && sudo apt-get -y install solaar
-sudo apt-get update && sudo apt-get -y install solaar-gnome3
-
+# Allows mapping of CapsLock to Ctrl
 sudo apt-get -y install gnome-tweak-tool
 
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
 sudo apt-get -y autoremove
+
+sudo apt-get -y install ffmpeg
+sudo add-apt-repository -y ppa:obsproject/obs-studio
+sudo apt-get update && sudo apt-get -y install obs-studio
