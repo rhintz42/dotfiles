@@ -123,7 +123,7 @@ sudo add-apt-repository -y ppa:daniel.pavel/solaar
 sudo apt-get update && sudo apt-get -y install solaar
 sudo apt-get update && sudo apt-get -y install solaar-gnome3
 
-sudo apt install gnome-tweak-tool
+sudo apt-get -y install gnome-tweak-tool
 
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
