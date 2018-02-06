@@ -104,7 +104,7 @@ sudo apt-get -f install
 sudo pip install speedtest-cli
 
 # install vlc
-sudo add-apt-repository ppa:mc3man/trusty-media
+# sudo add-apt-repository ppa:mc3man/trusty-media
 sudo apt-get update
 sudo apt-get -y install vlc vlc-plugin-*
 
