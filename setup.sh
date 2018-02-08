@@ -106,7 +106,7 @@ sudo apt-get -f install
 sudo pip install speedtest-cli
 
 # install vlc
-sudo add-apt-repository ppa:mc3man/trusty-media
+# sudo add-apt-repository ppa:mc3man/trusty-media
 sudo apt-get update
 sudo apt-get -y install vlc vlc-plugin-*
 
@@ -121,14 +121,17 @@ sudo apt-get -y install sshfs
 # Install vnstat to monitor how much data usage this computer uses
 sudo apt-get -y install vnstat
 
-sudo add-apt-repository -y ppa:daniel.pavel/solaar
-sudo apt-get update && sudo apt-get -y install solaar
-sudo apt-get update && sudo apt-get -y install solaar-gnome3
-
+# Allows mapping of CapsLock to Ctrl
 sudo apt-get -y install gnome-tweak-tool
 
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
 sudo apt-get -y autoremove
 
+# Install OBS
+sudo apt-get -y install ffmpeg
+sudo add-apt-repository -y ppa:obsproject/obs-studio
+sudo apt-get update && sudo apt-get -y install obs-studio
+
+# Install Calibre
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
