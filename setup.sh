@@ -49,6 +49,8 @@ ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/develop /usr/bin/develop
 ln -s $(pwd)/startup /usr/bin/startup
 
+sudo apt-get -y install git
+
 git config --global user.name "Robert Hintz"
 git config --global user.email roberthintz@gmail.com
 git config --global color.ui true
@@ -91,7 +93,7 @@ sudo apt-get -y install python-dev
 
 # FiX XXX
 #   This should now use python3 instead of the default python, this might be fine, though
-# sudo pip install virtualenvwrapper
+sudo pip install virtualenvwrapper
 
 dconf load /org/ < dconforg.dat
 
@@ -123,8 +125,10 @@ sudo add-apt-repository -y ppa:daniel.pavel/solaar
 sudo apt-get update && sudo apt-get -y install solaar
 sudo apt-get update && sudo apt-get -y install solaar-gnome3
 
-sudo apt install gnome-tweak-tool
+sudo apt-get -y install gnome-tweak-tool
 
 # Attempt to correct a system with broken dependencies in place
 sudo apt-get -yf install
 sudo apt-get -y autoremove
+
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
