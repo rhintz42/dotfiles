@@ -50,6 +50,7 @@ ln -s $(pwd)/develop /usr/bin/develop
 ln -s $(pwd)/startup /usr/bin/startup
 
 sudo apt-get -y install git
+sudo apt-get -y install curl
 
 git config --global user.name "Robert Hintz"
 git config --global user.email roberthintz@gmail.com
