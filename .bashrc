@@ -106,8 +106,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source /home/surveymonkey/.rvm/scripts/rvm
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# source /home/roberth/.rvm/scripts/rvm
+PATH=$PATH:$HOME/commands/
 
 # Load virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
@@ -141,5 +142,6 @@ NUM_WORDS="1"
 
 export EDITOR='vim'
 
-export NVM_DIR="/home/surveymonkey/.nvm"
+export NVM_DIR="/home/roberth/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
