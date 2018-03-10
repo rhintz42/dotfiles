@@ -134,5 +134,8 @@ sudo apt-get -y install ffmpeg
 sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo apt-get update && sudo apt-get -y install obs-studio
 
+# exFat
+sudo apt-get -y install exfat-utils exfat-fuse
+
 # Install Calibre
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
