@@ -1,4 +1,4 @@
-set foldmethod=indent
+" set foldmethod=indent
 set nocompatible
 set number
 set ruler
